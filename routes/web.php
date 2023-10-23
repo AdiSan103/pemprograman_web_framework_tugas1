@@ -40,13 +40,60 @@ Route::get('/', function () {
 // });
 
 Route::get('/home', function() {
-    return view('mahasiswa.home');
+    $data= [
+        'title' => 'SELAMAT DATANG DI HOME, pukul anda masuk :' . date('Y-m-d H:s:i')
+    ];
+    return view('mahasiswa.home', $data);
 });
 
 Route::get('/profile', function() {
-    return view('mahasiswa.profile');
+    $data= [
+        'title' => 'SELAMAT DATANG DI PROFILE, pukul anda masuk :' . date('Y-m-d H:s:i')
+    ];
+    return view('mahasiswa.profile',$data);
 });
 
 Route::get('/work', function() {
-    return view('mahasiswa.work');
+    $data= [
+        'title' => 'SELAMAT DATANG DI PEKERJAAn, pukul anda masuk :' . date('Y-m-d H:s:i'),
+        'items' => [
+            [
+                'title' => 'Website perusahaan X'
+            ],
+            [
+                'title' => 'Aplikasi mobile'
+            ],
+            [
+                'title' => 'Sistem manajemen inventaris'
+            ],
+            [
+                'title' => 'Website perusahaan X'
+            ],
+            [
+                'title' => 'Aplikasi mobile'
+            ],
+            [
+                'title' => 'Sistem manajemen inventaris'
+            ],
+            [
+                'title' => 'Website perusahaan X'
+            ],
+            [
+                'title' => 'Aplikasi mobile'
+            ],
+            [
+                'title' => 'Sistem manajemen inventaris'
+            ],
+            [
+                'title' => 'Website perusahaan X'
+            ],
+            [
+                'title' => 'Aplikasi mobile'
+            ],
+            [
+                'title' => 'Sistem manajemen inventaris'
+            ],
+        ]
+    ];
+    return view('mahasiswa.work',$data);
 });
